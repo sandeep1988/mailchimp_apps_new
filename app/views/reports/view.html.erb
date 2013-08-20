@@ -1,0 +1,55 @@
+<% content_for :title, "Report for:  %s" % @campaign['title'] %>
+<h2>Report for:  <%= @campaign['title'] %></h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Hard Bounces</th>
+        <th>Soft Bounces</th>
+        <th>Abuse Reports</th>
+        <th>Unsubscribes</th>
+    </tr>
+
+    <tr>
+        <td><%= @report['hard_bounces'] %></td>
+        <td><%= @report['soft_bounces'] %></td>
+        <td><%= @report['abuse_reports'] %></td>
+        <td><%= @report['unsubscribes'] %></td>
+    </tr>
+
+</table>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Opens</th>
+        <th>Unique Opens</th>
+        <th>Last Open</th>
+    </tr>
+
+    <tr>
+        <td><%= @report['opens'] %></td>
+        <td><%= @report['unique_opens'] %></td>
+        <td><%= @report['last_open'] %></td>
+    </tr>
+
+</table>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Clicks</th>
+        <th>Unique Clicks</th>
+        <th>Last Click</th>
+        <th>Users who Clicked</th>
+    </tr>
+
+    <tr>
+        <td><%= @report['clicks'] %></td>
+        <td><%= @report['unique_clicks'] %></td>
+        <td><%= @report['last_click'] %></td>
+        <td><%= @report['users_who_clicked'] %></td>
+    </tr>
+
+</table>
+

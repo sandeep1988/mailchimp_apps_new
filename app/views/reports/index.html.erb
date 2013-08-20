@@ -1,0 +1,20 @@
+<% content_for :title, "Reports" %>
+<h2>Select a Campaign to View Reports</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Sent at</th>
+    </tr>
+
+    <% @campaigns.each do |campaign| %>
+    <tr>
+        <td><a href="/reports/<%= campaign['id'] %>"><%= campaign['title'] %></a></td>
+        <td><%= campaign['type'] %></td>
+        <td><%= campaign['send_time'] %></td>
+    </tr>
+    <% end %>
+
+</table>
+

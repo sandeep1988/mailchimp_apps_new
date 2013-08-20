@@ -1,0 +1,27 @@
+<% content_for :title, @list['name'] %>
+<h2><%= @list['name'] %></h2>
+
+<h3>Add a New Member</h3>
+<p>You will not see the member listed until they click the link in the confirmation email.</p>
+<form action="/lists/<%= @list['id'] %>/subscribe/" method="post" class="form-inline">
+    <input type="hidden" name="list_id" value="<%= @list['id'] %>"/>
+    <input type="email" name="email" placeholder="email address"/>
+    <input type="submit" class="btn" value="Add Member"/>
+</form>
+
+<h3>Members</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Email</th>
+        <th>Subscribed Since</th>
+        <th>Member Rating</th>
+    </tr>
+    <% @members.each do |member| %>
+    <tr>
+        <td><%= member['email'] %></td>
+        <td><%= member['timestamp'] %></td>
+        <td><%= member['member_rating'] %></td>
+    </tr>
+    <% end %>
+</table>
+

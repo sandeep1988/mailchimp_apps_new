@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=h yield(:title) %> | MC API Ruby Wrapper Example</title>
+    <%= stylesheet_link_tag "bootstrap.min" %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+    <div class="navbar" style="margin-top:20px;">
+        <div class="navbar-inner">
+            <a class="brand" href="/">MC API Ruby Example</a>
+            <ul class="nav">
+                <li><a href="/lists">Lists</a></li>
+                <li><a href="/reports">Reports</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <% if flash[:success] %>
+        <p class="text-success"><%= flash[:success] %></p>
+    <% end %>
+
+    <% if flash[:error] %>
+        <p class="text-error"><%= flash[:error] %></p>
+    <% end %>
+
+
+    <%= yield %>
+
+</div>
+</body>
+</html>
