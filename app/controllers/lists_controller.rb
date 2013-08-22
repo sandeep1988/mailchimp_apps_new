@@ -17,7 +17,7 @@ class ListsController < ApplicationController
   def view
     list_id = params[:id]
     begin
-      lists_res = @mc.lists.list({'id' => list_id})
+      lists_res = @mc.lists.list({'list_id' => list_id})
       @list = lists_res['data'][0]
       members_res = @mc.lists.members(list_id)
       @members = members_res['data']
