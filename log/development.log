@@ -4936,3 +4936,61 @@ Completed 200 OK in 221ms (Views: 25.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-08-20 11:28:47 -0400
+  [1m[36m (131.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (149.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-10 11:35:55 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8907ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-10 11:36:04 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 3958ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2015-06-10 11:36:08 +0530
+
+
+Started GET "/lists" for 127.0.0.1 at 2015-06-10 11:36:14 +0530
+Processing by ListsController#index as HTML
+  Rendered lists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2352ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2015-06-10 11:36:22 +0530
+Processing by ReportsController#index as HTML
+  Rendered reports/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1012ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2015-06-10 11:36:27 +0530
+Processing by ListsController#index as HTML
+  Rendered lists/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1728ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/7f69fc846e" for 127.0.0.1 at 2015-06-10 11:36:41 +0530
+Processing by ListsController#view as HTML
+  Parameters: {"id"=>"7f69fc846e"}
+  Rendered lists/view.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2801ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/lists/7f69fc846e/subscribe/" for 127.0.0.1 at 2015-06-10 11:37:23 +0530
+Processing by ListsController#subscribe as HTML
+  Parameters: {"list_id"=>"7f69fc846e", "email"=>"bhushan.zwt@gmail.com", "id"=>"7f69fc846e"}
+Redirected to http://localhost:4000/lists/7f69fc846e
+Completed 302 Found in 1808ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/lists/7f69fc846e" for 127.0.0.1 at 2015-06-10 11:37:25 +0530
+Processing by ListsController#view as HTML
+  Parameters: {"id"=>"7f69fc846e"}
+  Rendered lists/view.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2886ms (Views: 3.8ms | ActiveRecord: 0.0ms)
